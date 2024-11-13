@@ -1,0 +1,55 @@
+<project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>connection.hibernate</groupId>
+  <artifactId>ConnectionHibernate</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Connection hibernate</name>
+  <dependencies>
+    <dependency>
+    	<groupId>org.hibernate</groupId>
+  		<artifactId>hibernate-core</artifactId>
+  		<version>5.6.15.Final</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.hibernate</groupId>
+  		<artifactId>hibernate-entitymanager</artifactId>
+  		<version>5.6.15.Final</version>
+    </dependency>
+    <dependency>
+    	<groupId>mysql</groupId>
+    	<artifactId>mysql-connector-java</artifactId>
+    	<version>8.0.33</version>
+	</dependency>
+	<dependency>
+    	<groupId>jakarta.xml.bind</groupId>
+    	<artifactId>jakarta.xml.bind-api</artifactId>
+    	<version>2.3.2</version>
+	</dependency>
+	<dependency>
+    	<groupId>org.glassfish.jaxb</groupId>
+    	<artifactId>jaxb-runtime</artifactId>
+    	<version>2.3.2</version>
+	</dependency>
+	<dependency>
+	    <groupId>net.sf.jasperreports</groupId>
+	    <artifactId>jasperreports</artifactId>
+	    <version>6.21.3</version>
+	</dependency>
+	<dependency>
+	    <groupId>net.sf.jasperreports</groupId>
+	    <artifactId>jasperreports-fonts</artifactId>
+	    <version>6.21.3</version>
+	</dependency>
+	<dependency>
+	    <groupId>net.sf.jasperreports</groupId>
+	    <artifactId>jasperreports-xalan</artifactId>
+	    <version>6.21.3</version>
+	</dependency>
+	<dependency>
+	    <groupId>jaxen</groupId>
+	    <artifactId>jaxen</artifactId>
+	    <version>1.2.0</version>
+	</dependency>
+
+   </dependencies>
+</project>
