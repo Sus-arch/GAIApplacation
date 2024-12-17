@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ViolationReport" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="567c7526-6d11-43d9-9dde-87295042da39">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataReportAdapter.jrdax"/>
+	<property name="net.sf.jasperreports.default.pdf.encoding" value="UTF-8"/>
+	<queryString language="xPath">
+		<![CDATA[/report/violations/violation]]>
+	</queryString>
+	<field name="date" class="java.sql.Date">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="date"/>
+		<fieldDescription><![CDATA[date]]></fieldDescription>
+	</field>
+	<field name="driverName" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="driverName"/>
+		<fieldDescription><![CDATA[driverName]]></fieldDescription>
+	</field>
+	<field name="car" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="car"/>
+		<fieldDescription><![CDATA[car]]></fieldDescription>
+	</field>
+	<field name="violationType" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="violationType"/>
+		<fieldDescription><![CDATA[violationType]]></fieldDescription>
+	</field>
+	<group name="Group1">
+		<groupExpression><![CDATA[$F{date}]]></groupExpression>
+		<groupHeader>
+			<band height="33">
+				<staticText>
+					<reportElement mode="Opaque" x="-20" y="0" width="150" height="32" forecolor="#666666" backcolor="#E6E6E6" uuid="8e01b641-0950-4be7-8b84-64fa45cc692b"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans Condensed" size="14"/>
+					</textElement>
+					<text><![CDATA[Дата нарушения]]></text>
+				</staticText>
+				<textField>
+					<reportElement mode="Opaque" x="130" y="0" width="445" height="32" forecolor="#006699" backcolor="#E6E6E6" uuid="67b305ca-3f0d-4c2e-a20a-34f09801db8b"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Sans Condensed" size="24" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{date}.toLocalDate()]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="-20" y="32" width="595" height="1" forecolor="#666666" uuid="a783b7cb-bd00-4ace-905d-000bf2d528f3"/>
+				</line>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group2">
+		<groupExpression><![CDATA[$F{driverName}]]></groupExpression>
+		<groupHeader>
+			<band height="32">
+				<textField>
+					<reportElement x="130" y="0" width="445" height="32" forecolor="#006699" uuid="63a8db35-c9b2-4bd4-91a8-5a96dd0d53d4"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Sans Condensed" size="22" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{driverName}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="-20" y="0" width="150" height="32" forecolor="#666666" uuid="f6098923-d726-42a7-9941-a12ea60ad88b"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans Condensed" size="14"/>
+					</textElement>
+					<text><![CDATA[ФИО нарушителя]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group3">
+		<groupExpression><![CDATA[$F{car}]]></groupExpression>
+		<groupHeader>
+			<band height="32">
+				<textField>
+					<reportElement x="130" y="0" width="445" height="32" forecolor="#006699" uuid="db1c4910-7519-47a0-87ff-5f2a56bee2f1"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Sans Condensed" size="20" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{car}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="-20" y="0" width="150" height="32" forecolor="#666666" uuid="ef71a5a7-9ec7-4560-9f6a-1bd0ff3d7dde"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans Condensed" size="14"/>
+					</textElement>
+					<text><![CDATA[Автомобиль]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group4">
+		<groupExpression><![CDATA[$F{violationType}]]></groupExpression>
+		<groupHeader>
+			<band height="32">
+				<textField>
+					<reportElement x="130" y="0" width="445" height="32" forecolor="#006699" uuid="467d8357-34d2-44d3-870f-e83c4f029a78"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="DejaVu Sans Condensed" size="16" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{violationType}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="-20" y="0" width="150" height="32" forecolor="#666666" uuid="07c523fb-1acf-4bd6-afbe-d280e54198d7"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+						<font fontName="DejaVu Sans Condensed" size="14"/>
+					</textElement>
+					<text><![CDATA[Тип нарушения]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="87eed252-2a52-45c9-86fd-6b0c695400db"/>
+				<staticText>
+					<reportElement x="20" y="20" width="554" height="43" forecolor="#FFFFFF" uuid="ad329600-829f-4f4d-a8c7-4b698ca5080d"/>
+					<textElement markup="styled">
+						<font fontName="DejaVu Sans Condensed" size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Отчёт по нарушениям]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="fd20d76a-a9f7-4d78-b1ce-e1eb55966380"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="-20" y="21" width="595" height="1" uuid="3ecd94c1-7976-4f56-8153-41336b240335"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="-20" y="4" width="535" height="13" backcolor="#E6E6E6" uuid="a7427c6c-039b-405b-bf73-3eac744055ff"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans Condensed"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Страница "+$V{PAGE_NUMBER}+" из"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="60" height="13" backcolor="#E6E6E6" uuid="f13ee76c-aa97-40ec-ae45-bf6c1b9074cc"/>
+				<textElement>
+					<font fontName="DejaVu Sans Condensed"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="120" height="13" uuid="415205a6-3363-476d-b1de-0c2799a62739"/>
+				<textElement>
+					<font fontName="DejaVu Sans Condensed"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}.toLocalDate()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

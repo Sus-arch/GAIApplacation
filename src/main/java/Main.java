@@ -1,6 +1,32 @@
+import org.apache.log4j.Logger;
+
+import application.Application;
+
+/**
+ * Класс Main является точкой входа в приложение.
+ * В нем происходит инициализация и запуск приложения, а также добавление обработчика для корректного завершения работы приложения.
+ */
 public class Main {
-	public static void main(String[] args) {
-		new Application().show();
-		
+    // Логгер для класса Main
+    private static final Logger logger = Logger.getLogger(Main.class);
+
+    /**
+     * Главный метод приложения, выполняющий его запуск.
+     * Логирует информацию о старте и завершении работы приложения.
+     * 
+     * @param args Аргументы командной строки (не используются в данном приложении).
+     */
+    public static void main(String[] args) {
+        // Логирование информации о старте приложения
+        logger.info("Запуск приложения");
+
+        // Создание и отображение главного окна приложения
+        new Application().show();
+
+        // Добавление обработчика для корректного завершения работы приложения при его закрытии
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            // Логирование информации о закрытии приложения
+            logger.info("Закрытие приложения");
+        }));
     }
 }
